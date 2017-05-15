@@ -325,7 +325,7 @@ sub collect_results {
     #     map { system("rm -r -f RESULTS/$_ ") if ( $_ =~ /\d+/ ) } @res_dir;
     # }
 
-    system("gc_res.pl $part_type $results_top_num \"$OPTS_locarna_model\" @modTreeFiles ");
+    system("perl /home/eteri/GraphClust/galaxy_wrappers/CollectResults/gc_res.pl $part_type $results_top_num \"$OPTS_locarna_model\" @modTreeFiles ");
 
     my $stats_file = "RESULTS/cluster.final.stats";
     system("rm -f $stats_file");
